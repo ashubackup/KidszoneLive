@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee" 
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+   <servlet-name>loaderr</servlet-name>
+   <servlet-class>api.Loaderr</servlet-class>
+   <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet>
+   <servlet-name>video</servlet-name>
+   <jsp-file>/video.jsp</jsp-file>
+   </servlet>
+    <servlet>
+   <servlet-name>entry</servlet-name>
+   <jsp-file>/landing.jsp</jsp-file>
+   </servlet>
+   <servlet>
+   <servlet-name>redirectuser</servlet-name>
+   <jsp-file>/redirect.jsp</jsp-file>
+   </servlet>
+   <servlet>
+     <servlet-name>play</servlet-name>
+   <jsp-file>/play.jsp</jsp-file>
+   </servlet>
+   
+ 	<error-page>
+ 	<error-code>404</error-code>
+ 	<location>/404.jsp</location>
+ 	</error-page>
+ 
+ 
+   <servlet-mapping>
+      <servlet-name>redirectuser</servlet-name>
+      <url-pattern>/userredirect</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      <servlet-name>video</servlet-name>
+      <url-pattern>/video</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      <servlet-name>entry</servlet-name>
+      <url-pattern>/entry</url-pattern>
+      </servlet-mapping>
+       <servlet-mapping>
+      <servlet-name>play</servlet-name>
+      <url-pattern>/play</url-pattern>
+      </servlet-mapping>
+      
+</web-app>
